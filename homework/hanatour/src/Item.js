@@ -1,6 +1,7 @@
 import React from 'react';
 import { FaStar, FaStarHalfAlt } from "react-icons/fa";
 import { IoIosArrowRoundUp } from "react-icons/io";
+import { TiHeartOutline } from "react-icons/ti";
 
 const Item = (props) => {
   return (
@@ -11,6 +12,7 @@ const Item = (props) => {
         <img src={props.imgSrc} alt='' />
       </figure>
       <div className="item-content">
+        <span className='btn-heart'><button type='button'><TiHeartOutline /></button></span>
         <em className='region'>{props.region}</em>
         <span className='product-name'>{props.productName}</span>
         <span className='price'>{props.price}원</span>

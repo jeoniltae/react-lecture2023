@@ -45,7 +45,58 @@
 }
 
 .item-content {
+  position: relative;
   padding: 20px;
+
+  .btn-heart {
+    position: absolute;
+    top: -26px;
+    right: 0;
+    overflow: hidden;
+    width: 104px;
+    height: 40px;
+    text-align: center;
+
+    &::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: 14px;
+      width: 38px;
+      height: 38px;
+      border-radius: 30px 0;
+      box-shadow: 0 24px 0 0 #fff;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      right: 0;
+      bottom: 14px;
+      width: 38px;
+      height: 38px;
+      border-radius: 0 30px;
+      box-shadow: 0 24px 0 0 #fff;
+    }
+
+    button {
+      position: relative;
+      z-index: 5;
+      width: 40px;
+      height: 40px;
+      padding: 10px;
+      border-radius: 100%;
+      border: 0;
+      background: #fff;
+      cursor: pointer;
+
+      svg {
+        display: block;
+        margin-top: -3px;
+        font-size: 24px;
+      }
+    }
+  }
 
   .region {
     display: block;
