@@ -1,0 +1,117 @@
+.App {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 1280px;
+  margin: 50px auto 0;
+}
+
+.item-container {
+  position: relative;
+  width: 277px;
+  margin: 0 15px 30px;
+  box-shadow: 0 2px 24px rgba(0, 0, 0, .1);
+  border-radius: 0 0 12px 12px;
+  cursor: pointer;
+
+  .icon-best {
+    position: absolute;
+    top: -15px;
+    left: -25px;
+    z-index: 5;
+    width: 50px;
+    height: 50px;
+    background: url(https://cdn-icons-png.flaticon.com/512/3712/3712572.png) no-repeat 0 0;
+    background-size: contain;
+
+    span {
+      display: none;
+    }
+  }
+
+  figure {
+    overflow: hidden;
+    border-radius: 12px 12px 0 0;
+
+    img {
+      display: block;
+      transition: all 0.7s;
+
+      &:hover {
+        transform: scale(1.1);
+      }
+    }
+  }
+}
+
+.item-content {
+  padding: 20px;
+
+  .region {
+    display: block;
+    margin-bottom: 8px;
+    font-style: normal;
+    font-size: 12px;
+    font-weight: bold;
+  }
+
+  .product-name {
+    display: block;
+    margin-bottom: 15px;
+    font-weight: bold;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+  }
+
+  .price {
+    margin-bottom: 15px;
+    color: #f06c5e;
+    font-weight: bold;
+  }
+
+  .condition {
+    margin-bottom: 10px;
+    font-size: 12px;
+    color: #666;
+  }
+
+  .grade {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    align-content: center;
+    gap: 0 5px;
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+    font-size: 12px;
+    border-bottom: 1px solid #ddd;
+
+    i {
+      font-style: normal;
+      color: #666;
+    }
+  }
+
+  .info {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    align-content: center;
+    gap: 0 10px;
+    font-size: 12px;
+    color: #666;
+
+    span {
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-start;
+      align-items: center;
+      align-content: center;
+    }
+  }
+}
