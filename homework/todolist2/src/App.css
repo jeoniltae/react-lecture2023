@@ -1,0 +1,126 @@
+.wrap {
+  height: 100vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.todolist-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  width: 1000px;
+  height: 700px;
+  padding: 25px;
+  border: 4px solid #333;
+  background: #fff;
+  border-radius: 5px;
+
+  h1 {
+    margin-bottom: 25px;
+    font-size: 40px;
+    text-align: center;
+    -webkit-text-stroke: 2px #489cc0;
+  }
+
+  &>header {
+    width: 100%;
+
+    form {
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-start;
+      align-items: center;
+      gap: 0 5px;
+
+      input[type="text"] {
+        flex: 1;
+        padding-inline: 15px;
+        line-height: 38px;
+        border: 1px solid #666;
+        border-radius: 3px;
+        font-size: 25px;
+
+        &::placeholder {
+          color: #dedede;
+        }
+      }
+
+      input[type="submit"] {
+        flex: 0 0 40px;
+        height: 40px;
+        font-size: 25px;
+        font-weight: bold;
+        color: #fff;
+        text-align: center;
+        background: #489cc0;
+        border-radius: 3px;
+      }
+    }
+  }
+}
+
+.todolist-body {
+  flex: 1;
+  width: 100%;
+  padding-top: 20px;
+
+  ul {
+    height: 507px;
+    overflow-y: auto;
+
+    li {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px;
+      border-bottom: 1px solid #dedede;
+
+      &:first-child {
+        border-top: 1px solid #dedede;
+      }
+
+      span {
+        &:first-child {
+          input[type="checkbox"] {
+            width: 18px;
+            height: 18px;
+            vertical-align: top;
+            accent-color: #489cc0;
+
+            &:checked+em {
+              color: #489cc0;
+            }
+          }
+
+          em {
+            display: inline-block;
+            margin-left: 8px;
+            line-height: 18px;
+            font-style: normal;
+          }
+        }
+
+        &:last-child {
+          button {
+            display: inline-block;
+            width: 30px;
+            height: 30px;
+            line-height: 30px;
+            vertical-align: top;
+            font-size: 22px;
+            color: #489cc0;
+            text-align: center;
+
+            &:first-child {
+              margin-right: 10px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
